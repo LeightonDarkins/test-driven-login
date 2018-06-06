@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-scripts": "1.1.4"
@@ -13,10 +14,13 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "cypress": "cypress open",
-    "test:functional": "npm-run-all --parallel start cypress"
+    "server": "json-server --watch ./fakebackend/login.json --port 4000",
+    "test:functional": "npm-run-all --parallel start cypress server"
   },
   "devDependencies": {
     "cypress": "^3.0.1",
+    "jest-mock-axios": "^2.1.11",
+    "json-server": "^0.13.0",
     "npm-run-all": "^4.1.3",
     "react-testing-library": "^3.1.3"
   }
