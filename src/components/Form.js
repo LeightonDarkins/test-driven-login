@@ -33,8 +33,6 @@ class Form extends React.Component {
     }).catch(() => {
       console.error('something went wrong')
     })
-
-    
   }
 
   handleUsernameCange (event) {

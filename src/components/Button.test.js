@@ -5,11 +5,11 @@ import Button from './Button'
 
 describe('Button', () => {
   it('renders without errors', () => {
-    const {container} = render(<Button />)
+    render(<Button label='Login' id='login-button'/>)
   })
 
   it('renders a html button with a provided label', () => {
-    const {getByText} = render(<Button label='Login'/>)
+    const {getByText} = render(<Button label='Login' id='login-button'/>)
 
     expect(getByText(/login/i).tagName).toEqual('BUTTON')
   })
@@ -19,10 +19,4 @@ describe('Button', () => {
 
     expect(getByText(/login/i).id).toEqual('login-button')
   })
-
-  // it('renders with the provided type', () => {
-  //   const {getByText} = render(<Button label='Login' id='login-button' type='submit'/>)
-
-  //   expect(getByText(/login/i).type).toEqual('submit')
-  // })
 })
