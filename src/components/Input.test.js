@@ -5,9 +5,7 @@ import Input from './Input'
 
 describe('Input', () => {
   it('renders without any errors', () => {
-    const {container} = render(<Input />)
-
-    expect(container).not.toBeUndefined()
+    render(<Input />)
   })
 
   it('renders with a label', () => {
@@ -19,7 +17,7 @@ describe('Input', () => {
     expect(getByText(/username/i).tagName).toEqual('LABEL')
   })
 
-  it('renders with a html input', () => {
+  it('renders with a html text input', () => {
     const {getByLabelText} = render(<Input id='username' label='Username' />)
 
     // this assertion guarantees that
